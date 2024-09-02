@@ -1,0 +1,238 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto', arial, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2a0a0a);
+    color: #f5f5f5;
+    line-height: 1.8;
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(26, 26, 26, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff4d4d;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff1a1a;
+}
+
+/* Header styles */
+header {
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 30px;
+    text-align: center;
+    color: #ff4d4d;
+    transition: all 0.4s ease;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+    text-shadow: 3px 3px 6px rgba(255, 0, 0, 0.4);
+    transition: all 0.4s ease;
+    letter-spacing: 2px;
+}
+
+/* Navigation styles */
+nav {
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 15px;
+    transition: all 0.4s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(255, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    transition: all 0.4s ease;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+nav ul li a {
+    color: #ff8080;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    padding-bottom: 8px;
+    font-size: 1.1em;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff1a1a;
+    transition: width 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: #ff1a1a;
+}
+
+/* Main content styles */
+main {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    transition: all 0.4s ease;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 30vh;
+}
+
+.content {
+    background-color: rgba(10, 10, 10, 0.8);
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.content p {
+    font-size: 1.2em;
+    transition: all 0.4s ease;
+    line-height: 1.8;
+}
+
+.content p:hover {
+    font-size: 1.25em;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+h2 {
+    color: #ff4d4d;
+    border-bottom: 3px solid #ff1a1a;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    transition: all 0.4s ease;
+    font-size: 2.2em;
+}
+
+ul {
+    padding-left: 25px;
+    margin-bottom: 20px;
+    transition: all 0.4s ease;
+}
+
+ul li {
+    font-size: 1.2em;
+    transition: all 0.4s ease;
+    margin-bottom: 10px;
+}
+
+ul li:hover {
+    font-size: 1.25em;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+/* Footer styles */
+footer {
+    background-color: rgba(10, 10, 10, 0.8);
+    color: #ff8080;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    transition: all 0.4s ease;
+    font-size: 1.1em;
+}
+
+/* Contact Us button styles */
+.contact-button {
+    display: inline-block;
+    background-color: #ff1a1a;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    box-shadow: 0 4px 6px rgba(255, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+    background-color: #ff4d4d;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 8px rgba(255, 0, 0, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 30px;
+        padding-top: 25vh;
+    }
+
+    .content {
+        padding: 25px;
+    }
+
+    .content p,
+    ul li {
+        font-size: 1.1em;
+    }
+
+    .content p:hover,
+    ul li:hover {
+        font-size: 1.15em;
+    }
+
+    .contact-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
